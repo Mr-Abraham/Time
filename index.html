@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+<link rel="shortcut icon" href="https://user-images.githubusercontent.com/82175847/120200367-e2488b80-c241-11eb-866d-3e469e2ad9b6.png" type="image/x-icon" sizes="32x32">
+  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background: #000 url('https://user-images.githubusercontent.com/82175847/120200247-bfb67280-c241-11eb-9914-6a42b581c1a0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            animation: bgchange 20s infinite alternate  ease-in-out;
+            animation-delay: 2s;
+            transition: all 450ms ease;
+        }
+        @keyframes bgchange{
+         
+         0%{
+             background:url('https://user-images.githubusercontent.com/82175847/120200264-c47b2680-c241-11eb-8b3e-b8b5e90a9cf9.jpg');
+             background-size: cover;
+         }
+         50%{
+        background: url('https://user-images.githubusercontent.com/82175847/120200342-dbba1400-c241-11eb-888e-cfe5bfe0f2bd.jpg'); 
+             background-size: cover;
+             background-position: center;
+         }
+
+         100%{
+             background: url('https://user-images.githubusercontent.com/82175847/120200237-ba592800-c241-11eb-8c30-a7187f24101c.jpg');
+             background-size: cover;
+         }
+         
+
+        }
+        .timer{
+            padding:.5em;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: .52em;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .hour,
+    .minute
+    {
+        border-right: 1px solid #ddd;
+    }
+.hour,
+.minute,
+.second{
+
+    padding: .5em;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.hour h1,
+.minute h1,
+.second h1 {
+   font-size: 5em;
+   color: #fff;
+   font-weight: 500;
+}   
+.hour p,
+.minute p,
+.second p {
+   font-size: .81em;
+   color: #fff;
+   font-weight: 500;
+   margin-top: 1.5em;
+}            
+        .time-dialouge{
+            position: relative;
+            top: 25%;
+        }
+        .time-dialouge p{
+     color: #fff;
+     text-align: center;
+     font-family: 'Quicksand', sans-serif;
+     font-size: 1.75em;
+     word-spacing: .41em;
+        }
+        .icon a{
+            color: #fff;
+            font-size: 2em;
+            width: 50px;
+        }
+        .social-icons{
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            justify-content: center;
+            grid-gap: 1em;
+            border-bottom: 2px solid #fff;
+            position: fixed;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+     .icon img{
+         width: 30px;
+         filter: invert(1);
+         transition: 350ms ease;
+        
+     }
+     .icon img:hover{
+    transform: translateY(-5px);
+     }
+     .social-creator{
+         display: flex;
+         color: #fff;
+     }
+     .clock{
+         width: 50px;
+         background: transparent;
+         border-radius: 50%;
+         position: relative;
+         top: 12px;
+         
+     }
+    
+    </style>
+
+</head>
+<body>
+    <div class="time-dialouge">
+        <p> <img src="https://user-images.githubusercontent.com/82175847/120200970-8b8f8180-c242-11eb-9e0f-3274352568a5.gif" alt="" class="clock"> Time is Money</p>
+    </div>
+    <div class="timer">
+    <div class="hour">
+     <h1 id="hours"></h1>
+     <p>Hours</p>
+    </div>
+
+    <div class="minute">
+        <h1 id="minute"></h1>
+        <p>Minutes</p>
+    </div>
+    <div class="second">
+        <h1 id="seconds"></h1>
+        <p>Seconds</p>
+    </div>
+    </div>
+    
+        <div class="social-icons">
+            <div class="icon"><a href="https://www.instagram.com/shivamabraham/"><img src="https://user-images.githubusercontent.com/82175847/120200387-e8d70300-c241-11eb-9d4c-c83d812e7780.png" alt=""></a></div>
+            <div class="icon"><a href="https://www.facebook.com/shivam.abraham"><img src="https://user-images.githubusercontent.com/82175847/120200380-e5dc1280-c241-11eb-86de-1e56f91c65b7.png" alt=""></a></div>
+            <div class="icon"><a href="https://twitter.com/abraham_shivam"><img src="https://user-images.githubusercontent.com/82175847/120200409-ed9bb700-c241-11eb-888f-da4f9a4b35b9.png" alt=""></a></div>
+            <div class="icon"><a href="https://github.com/Mr-Abraham"><img src="https://user-images.githubusercontent.com/82175847/120200403-eb395d00-c241-11eb-89b2-aaf0065c5383.png" alt=""></a></div>
+        </div>
+    
+    <script>
+        var timer = setInterval( time,1000);
+        function time(){
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            var m = d.getMinutes();
+            var h = d.getHours();
+            var s = d.getSeconds();
+            h = h % 12;
+           h = hours ? h : 12;
+        
+            document.getElementById('minute').innerHTML = m;
+            document.getElementById('hours').innerHTML = h;
+            document.getElementById('seconds').innerHTML = s;
+        }
+
+
+    </script>
+</body>
+</html>
